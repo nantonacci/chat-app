@@ -25,6 +25,12 @@ html, body {
     width: 20%;
   }
   
+  .radios {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
   .joinInput {
     border-radius: 0;
     padding: 15px 20px;
@@ -45,7 +51,6 @@ html, body {
       font-weight: 600;
       text-transform: uppercase;
       text-decoration: none;
-      background: #148EB8;
       padding: 20px;
       border-radius: 5px;
       display: inline-block;

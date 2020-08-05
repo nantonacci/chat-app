@@ -6,7 +6,7 @@ import onlineIcon from '../../icons/onlineIcon.png';
 import './InfoBar.css';
 
 const InfoBar = ({ room }) => (
-    <div className="infoBar">
+    <div className="infoBar" id="color">
         <div className="leftInnerContainer">
             <img className="onlineIcon" src={onlineIcon} alt="online" />
             <h3>{room}</h3>

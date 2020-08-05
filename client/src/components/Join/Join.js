@@ -29,9 +29,45 @@ const Join  = withRouter(({ history }) => {
                     <input placeholder="Room" className="joinInput mt-20" type="text" onChange={(event) => setRoom(event.target.value) } />
                 </div>
 
-                {/* <Link onClick={(event) => (!name || !room) ? event.preventDefault : null} to={`/chat?name=${name}&room=${room}`}> */}
-                    <button className="button mt-20" type="submit">sign in</button>
-                {/* </Link> */}
+                <div className="radios">
+                    <div id="softlime">
+                        <input type="radio" id="softlime" name="color" value="softlime" />
+                        <label for="softlime"></label>
+                    </div>
+
+                    <div id="seablue">
+                        <input type="radio" id="seablue" name="color" value="seablue"/>
+                        <label for="seablue"></label>
+                    </div>
+
+                    <div id="orange">
+                        <input type="radio" id="orange" name="color" value="orange"/>
+                        <label for="orange"></label>
+                    </div>
+
+                    <div id="magenta">
+                        <input type="radio" id="magenta" name="color" value="magenta"/>
+                        <label for="magenta"></label>
+                    </div>
+
+                    <div id="redorange">
+                        <input type="radio" id="redorange" name="color" value="redorange"/>
+                        <label for="redorange"></label>
+                    </div>
+
+                    <div id="yellow">
+                        <input type="radio" id="yellow" name="color" value="yellow" />
+                        <label for="yellow"></label>
+                    </div>
+
+                    <div id="deepblue">
+                        <input type="radio" id="deepblue" name="color" value="deepblue"/>
+                        <label for="deepblue" ></label>
+                    </div>
+                </div>
+                {/* end radios */}
+
+                    <button id="color" className="button mt-20" type="submit">sign in</button>
             </form>
         </div>
     )

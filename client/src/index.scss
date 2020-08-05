@@ -1,0 +1,181 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .1em;
+}
+
+// colors
+    $softlime: #a0be3d;
+    $seablue: #148eb8;
+    $orange: #f98b34;
+    $magenta: #d03879;
+    $redorange: #e73e30;
+    $yellow: #fee538;
+    $deepblue: #38529e;
+
+button {
+    letter-spacing: .1em;
+}
+
+#color {
+    background-color: $seablue;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+div#softlime>input[type="radio"]+label:before {
+    content: "";
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid $softlime;
+    background-color: $softlime;
+    border-radius: 50%;
+}
+
+div#seablue>input[type="radio"]+label:before {
+    content: "";
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid $seablue;
+    background-color: $seablue;
+    border-radius: 50%;
+}
+
+div#orange>input[type="radio"]+label:before {
+    content: "";
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid $orange;
+    background-color: $orange;
+    border-radius: 50%;
+}
+
+div#magenta>input[type="radio"]+label:before {
+    content: "";
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid $magenta;
+    background-color: $magenta;
+    border-radius: 50%;
+}
+
+div#redorange>input[type="radio"]+label:before {
+    content: "";
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid $redorange;
+    background-color: $redorange;
+    border-radius: 50%;
+}
+
+div#yellow>input[type="radio"]+label:before {
+    content: "";
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid $yellow;
+    background-color: $yellow;
+    border-radius: 50%;
+}
+
+input[type="radio"]+label:before {
+    content: "";
+    /* create custom radiobutton appearance */
+    position: static;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid $deepblue;
+    background-color: $deepblue;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked + label:before {
+    background-color: white;
+}
+
+// #softlime {
+//     height: 20px;
+//     width: 20px;
+//     border-radius: 50%;
+//     background: $softlime;
+// }
+
+// #seablue{
+//     height: 20px;
+//     width: 20px;
+//     border-radius: 50%;
+//     background: $seablue;
+// }
+
+// #orange{
+//     height: 20px;
+//     width: 20px;
+//     border-radius: 50%;
+//     background: $orange;
+// }
+
+// #magenta{
+//     height: 20px;
+//     width: 20px;
+//     border-radius: 50%;
+//     background: $magenta;
+// }
+
+// #redorange{
+//     height: 20px;
+//     width: 20px;
+//     border-radius: 50%;
+//     background: $redorange;
+// }
+
+// #yellow{
+//     height: 20px;
+//     width: 20px;
+//     border-radius: 50%;
+//     background: $yellow;
+// }
+
+// #deepblue{
+//     height: 20px;
+//     width: 20px;
+//     border-radius: 50%;
+//     background: $deepblue;
+// }
