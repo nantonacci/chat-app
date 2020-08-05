@@ -25,10 +25,24 @@ html, body {
     width: 20%;
   }
   
-  .radios {
+  .colors {
     padding-top: 20px;
     display: flex;
     justify-content: space-around;
+  }
+
+  @media only screen and (max-width: 1400px){
+    .colors{
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+}
+  @media only screen and (max-width: 1000px){
+    .colors{
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding-top: 0px;
+    }
   }
   
   .joinInput {

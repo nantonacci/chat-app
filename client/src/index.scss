@@ -28,154 +28,59 @@ input[type="radio"] {
     display: none;
 }
 
-div#softlime>input[type="radio"]+label:before {
-    content: "";
-    /* create custom radiobutton appearance */
+.circles{
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    padding: 6px;
-    /* background-color only for content */
+    width: 35px;
+    height: 35px;
+    padding: 4px;
     background-clip: content-box;
+    border-radius: 50%;
+}
+
+div#softlime {
     border: 2px solid $softlime;
     background-color: $softlime;
-    border-radius: 50%;
 }
 
-div#seablue>input[type="radio"]+label:before {
-    content: "";
-    /* create custom radiobutton appearance */
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    padding: 6px;
-    /* background-color only for content */
-    background-clip: content-box;
+div#seablue {
     border: 2px solid $seablue;
     background-color: $seablue;
-    border-radius: 50%;
 }
 
-div#orange>input[type="radio"]+label:before {
-    content: "";
-    /* create custom radiobutton appearance */
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    padding: 6px;
-    /* background-color only for content */
-    background-clip: content-box;
+div#orange {
     border: 2px solid $orange;
     background-color: $orange;
-    border-radius: 50%;
 }
 
-div#magenta>input[type="radio"]+label:before {
-    content: "";
-    /* create custom radiobutton appearance */
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    padding: 6px;
-    /* background-color only for content */
-    background-clip: content-box;
+div#magenta {
     border: 2px solid $magenta;
     background-color: $magenta;
-    border-radius: 50%;
 }
 
-div#redorange>input[type="radio"]+label:before {
-    content: "";
-    /* create custom radiobutton appearance */
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    padding: 6px;
-    /* background-color only for content */
-    background-clip: content-box;
+div#redorange {
     border: 2px solid $redorange;
     background-color: $redorange;
-    border-radius: 50%;
 }
 
-div#yellow>input[type="radio"]+label:before {
-    content: "";
-    /* create custom radiobutton appearance */
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    padding: 6px;
-    /* background-color only for content */
-    background-clip: content-box;
+div#yellow {
     border: 2px solid $yellow;
     background-color: $yellow;
-    border-radius: 50%;
 }
-
-input[type="radio"]+label:before {
-    content: "";
-    /* create custom radiobutton appearance */
-    position: static;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    padding: 6px;
-    /* background-color only for content */
-    background-clip: content-box;
+div#deepblue {
     border: 2px solid $deepblue;
     background-color: $deepblue;
-    border-radius: 50%;
 }
 
-input[type="radio"]:checked + label:before {
-    background-color: white;
+@media only screen and (max-width: 1400px){
+    .circles{
+        width: 25px;
+        height: 25px;
+        padding: 2px;
+    }
 }
 
-// #softlime {
-//     height: 20px;
-//     width: 20px;
-//     border-radius: 50%;
-//     background: $softlime;
-// }
-
-// #seablue{
-//     height: 20px;
-//     width: 20px;
-//     border-radius: 50%;
-//     background: $seablue;
-// }
-
-// #orange{
-//     height: 20px;
-//     width: 20px;
-//     border-radius: 50%;
-//     background: $orange;
-// }
-
-// #magenta{
-//     height: 20px;
-//     width: 20px;
-//     border-radius: 50%;
-//     background: $magenta;
-// }
-
-// #redorange{
-//     height: 20px;
-//     width: 20px;
-//     border-radius: 50%;
-//     background: $redorange;
-// }
-
-// #yellow{
-//     height: 20px;
-//     width: 20px;
-//     border-radius: 50%;
-//     background: $yellow;
-// }
-
-// #deepblue{
-//     height: 20px;
-//     width: 20px;
-//     border-radius: 50%;
-//     background: $deepblue;
-// }
+@media only screen and (max-width: 1000px){
+    .circles{
+        margin-top: 20px;
+    }
+}
