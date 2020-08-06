@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useHistory, withRouter } from 'react-router-dom';
 
 import './Join.css';
@@ -7,13 +7,45 @@ const Join  = withRouter(({ history }) => {
 
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
+    const [color, setColor] = useState('seablue');
 
+    const [colorState, setColorState] = useState({
+        softlime: 'noclass',
+        seablue: 'active',
+        orange: 'noclass',
+        magenta: 'noclass',
+        redorange: 'noclass',
+        yellow: 'noclass',
+        deepblue: 'noclass'
+    })
+
+    // collects user name and room and pushes to URL
     const submitHandler = (event) => {
         if (!name || !room){
             event.preventDefault()
         } else {
             history.push(`/chat?name=${name}&room=${room}`)
         }
+    }
+
+    const colorHandler = (event) => {
+        let newColor = event.target.id
+        let prevColor = color
+        console.log('new color:', newColor)
+
+        console.log('current colorState:', colorState)
+        
+        setColorState({
+            ...colorState,
+            [prevColor]: 'noclass',
+            [event.target.id]: 'active'
+        })
+
+        console.log('new colorState:', colorState)
+
+        setColor(`${event.target.id}`)
+
+        console.log('current color:', color)
     }
 
 
@@ -30,33 +62,36 @@ const Join  = withRouter(({ history }) => {
                 </div>
 
                 <div className="colors">
-                    <div className="circles" id="softlime">
-                        
-                    </div>
+                    {/* <div className={`circles ${active? 'active': null}`} id="softlime" onClick={colorHandler}></div> */}
 
-                    <div className="circles" id="seablue">
-                        
-                    </div>
+                    <div className={`circles ${colorState.softlime}`}
+                    id="softlime"
+                    onClick={colorHandler}
+                    ></div>
 
-                    <div className="circles" id="orange">
-                        
-                    </div>
+                    <div className={`circles ${colorState.seablue}`}
+                    id="seablue"
+                    onClick={colorHandler}></div>
 
-                    <div className="circles" id="magenta">
-                        
-                    </div>
+                    <div className={`circles ${colorState.orange}`}
+                    id="orange"
+                    onClick={colorHandler}></div>
 
-                    <div className="circles" id="redorange">
-                        
-                    </div>
+                    <div className={`circles ${colorState.magenta}`}
+                    id="magenta"
+                    onClick={colorHandler}></div>
 
-                    <div className="circles" id="yellow">
-                        
-                    </div>
+                    <div className={`circles ${colorState.redorange}`}
+                    id="redorange"
+                    onClick={colorHandler}></div>
 
-                    <div className="circles" id="deepblue">
-                        
-                    </div>
+                    <div className={`circles ${colorState.yellow}`}
+                    id="yellow"
+                    onClick={colorHandler}></div>
+
+                    <div className={`circles ${colorState.deepblue}`}
+                    id="deepblue"
+                    onClick={colorHandler}></div>
                 </div>
                 {/* end colors */}
 
