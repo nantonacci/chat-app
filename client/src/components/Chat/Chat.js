@@ -16,18 +16,20 @@ const Chat = ({ location }) => {
 
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
+    const [color, setColor] = useState('');
     const [users, setUsers] = useState('');
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
     const ENDPOINT = 'https://nicos-chat-app.herokuapp.com/';
 
     useEffect(() => {
-        const { name, room } = queryString.parse(location.search);
+        const { name, room, color } = queryString.parse(location.search);
 
         socket = io(ENDPOINT);
 
         setName(name);
         setRoom(room);
+        setColor(color);
         
         socket.emit('join', { name, room }, (error) => {
             if(error) {
@@ -62,11 +64,11 @@ const Chat = ({ location }) => {
         <div className="outerContainer">
             <div className="container">
 
-                <InfoBar room={room} />
+                <InfoBar room={room} color={color} />
 
-                <Messages messages={messages} name={name} />
+                <Messages messages={messages} name={name} color={color} />
 
-                <Input setMessage={setMessage} sendMessage={sendMessage} message={message} />
+                <Input setMessage={setMessage} sendMessage={sendMessage} message={message} color={color} />
 
             </div>
 

@@ -1,0 +1,116 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .1em;
+}
+
+// colors
+    $softlime: #a0be3d;
+    $seablue: #148eb8;
+    $orange: #f98b34;
+    $magenta: #d03879;
+    $redorange: #e73e30;
+    $yellow: #fee538;
+    $deepblue: #38529e;
+
+button {
+    letter-spacing: .1em;
+}
+
+#color {
+    background-color: $seablue;
+}
+
+.softlime{
+    background-color: $softlime;
+}
+.seablue{
+    background-color: $seablue;
+}
+.orange{
+    background-color: $orange;
+}
+.magenta{
+    background-color: $magenta;
+}
+.redorange{
+    background-color: $redorange;
+}
+.yellow{
+    background-color: $yellow;
+}
+.deepblue{
+    background-color: $deepblue;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.circles{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    padding: 4px;
+    background-clip: content-box;
+    border-radius: 50%;
+}
+
+div#softlime {
+    border: 2px solid $softlime;
+    background-color: $softlime;
+}
+
+div#seablue {
+    border: 2px solid $seablue;
+    background-color: $seablue;
+}
+
+div#orange {
+    border: 2px solid $orange;
+    background-color: $orange;
+}
+
+div#magenta {
+    border: 2px solid $magenta;
+    background-color: $magenta;
+}
+
+div#redorange {
+    border: 2px solid $redorange;
+    background-color: $redorange;
+}
+
+div#yellow {
+    border: 2px solid $yellow;
+    background-color: $yellow;
+}
+div#deepblue {
+    border: 2px solid $deepblue;
+    background-color: $deepblue;
+}
+
+@media only screen and (max-width: 1400px){
+    .circles{
+        width: 25px;
+        height: 25px;
+        padding: 2px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .circles{
+        margin-top: 20px;
+    }
+}
+
+.active{
+    background-color: white !important;
+}
+
+.noclass{
+    background-color: inherit;
+}
