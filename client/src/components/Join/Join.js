@@ -24,10 +24,12 @@ const Join  = withRouter(({ history }) => {
         if (!name || !room){
             event.preventDefault()
         } else {
-            history.push(`/chat?name=${name}&room=${room}`)
+            history.push(`/chat?name=${name}&room=${room}&color=${color}`)
         }
     }
 
+    // updates selected color
+    // changes selected color button to white
     const colorHandler = (event) => {
         let newColor = event.target.id
         let prevColor = color
@@ -62,12 +64,10 @@ const Join  = withRouter(({ history }) => {
                 </div>
 
                 <div className="colors">
-                    {/* <div className={`circles ${active? 'active': null}`} id="softlime" onClick={colorHandler}></div> */}
 
                     <div className={`circles ${colorState.softlime}`}
                     id="softlime"
-                    onClick={colorHandler}
-                    ></div>
+                    onClick={colorHandler}></div>
 
                     <div className={`circles ${colorState.seablue}`}
                     id="seablue"
